@@ -1,1 +1,1 @@
-# java-exercises
+Mastering Java Programming Course - Tim Buchalka
