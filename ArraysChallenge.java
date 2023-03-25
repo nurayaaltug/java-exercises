@@ -35,3 +35,42 @@ class Main {
   }
 
 }
+
+
+
+
+
+
+
+import java.util.*; 
+import java.io.*;
+
+class Main {
+
+public static int ArrayChallenge(int[] arr) {
+ var mode=0;
+ var count2=0;
+ for(var i=0; i<arr.length; i++){
+    var count=0;
+    for(var j=0; j<arr.length; j++){
+        if(arr[i] == arr[j] && j!=i){
+            count++;
+        }
+        if(count>count2){
+            mode = arr[i];
+            count2 = count;
+            count =0;
+        }
+    }
+}
+ if(count2==0){
+    return -1;
+    }
+return mode;
+}
+
+public static void main (String[] args) {  
+      
+    Scanner s = new Scanner(System.in);
+    System.out.print(ArrayChallenge(s.nextLine())); 
+}}
