@@ -9,6 +9,8 @@ The evaluations will be such that there will not be any decimal operations, so y
 *************************************************************************************************************************/
 import java.util.*;
 
+import java.util.*;
+
 
 class Main {
     public static Integer MathChallenge(String str){
@@ -120,3 +122,11 @@ class Main {
         }
         return digit.toString();
     }
+
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(MathChallenge(s.nextLine())); 
+  }
+
+}
