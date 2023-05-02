@@ -32,3 +32,21 @@ public class Solution {
         in.close();
     }
 }
+/***********************************************************************************************************************************************
+Kod, öncelikle kullanıcıdan girdi olarak bir tamsayı ('n') alır.
+Bu tamsayı, iç içe geçmiş listelerin (ArrayList of ArrayList) kaç adet olacağını belirler. 
+Daha sonra, 'n' kez dönen bir döngü oluşturulur ve her adımda kullanıcıdan bir tamsayı daha istenir ('d'). 
+Bu tamsayı, bir iç liste oluşturmak için kullanılır. Daha sonra, 'd' kez dönen bir başka döngü oluşturulur ve her adımda kullanıcıdan bir tamsayı daha istenir. 
+Bu tamsayı, önceki döngü adımında oluşturulan iç listeye eklenir. Bu işlem, 'd' kez tekrarlanır ve iç liste tamamlanır. 
+Daha sonra, bu iç liste, ana liste olarak adlandırılan bir dizi listeye eklenir. Bu işlem, 'n' kez tekrarlanarak iç içe geçmiş listeler tamamlanır.
+
+Daha sonra, kullanıcıdan bir tamsayı daha istenir ('q').
+Bu tamsayı, kodun sorgu sayısını belirler. 'q' kez dönen bir döngü oluşturulur ve her adımda kullanıcıdan iki tamsayı daha istenir ('a' ve 'b').
+Bu tamsayılar, iç içe geçmiş listelerde bulunan bir öğeyi belirlemek için kullanılır. 
+Örneğin, eğer 'a' 2 ve 'b' 3 ise, bu, ana listenin 2. elemanının iç listesinin 3. elemanına denk gelir.
+
+
+Ardından, kod, try-catch bloğu içinde işlem yapar. Eğer belirtilen öğe bulunursa, öğenin değeri ekrana yazdırılır.
+Aksi takdirde, bir hata mesajı ("ERROR!") yazdırılır.
+*******************************************************************************************************************************************************/
+En son olarak, 'Scanner' sınıfındaki 'in' nesnesi kapatılır. Bu, programın klavyeden veri girişi için kullanılan kaynağı serbest bırakmasını sağlar.
