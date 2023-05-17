@@ -1,0 +1,55 @@
+******************************************************************************************************************************************************/
+Given a list of strings of bracket characters: {}(), the string of brackets is balanced under the following conditions:
+1. it is the empty string. 
+2. if strings a and b are balanced, ab is balanced.
+3.if string a is balanced, then (a) and {a} are balanced.
+Write a class determines whether the brackets in each string are balanced and returns true if the string is balanced, or false if it is not.
+
+the provided code contrains the declaration for a class named Solution with a method that does the following:  
+creates a Parser object.    
+Reads an unknown number of strings from stdin.      
+Passes each string as an argument to the Parser object's isBalanced method and prints value returned by the method on a new line.    
+Complete the function an isBalanced in the editor below.  
+isBalanced has the following parameter(s):  
+string s: a string of characters to check for balance.  
+Returns:  string: a string that denotes whether the string is balanced: true if the string is balanced, or false if it is not 
+*******************************************************************************************************************************************************/
+import java.util.*;
+
+// Write your code here. DO NOT use an access modifier in your class declaration.
+class Parser {
+    static String isBalanced(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char bracket : s.toCharArray()) {
+            if (bracket == '{' || bracket == '[' || bracket == '(') {
+                stack.push(bracket);
+            } else if (bracket == '}' || bracket == ']' || bracket == ')') {
+                if (stack.isEmpty()) {
+                    return "false";
+                }
+
+                char top = stack.pop();
+                if ((bracket == '}' && top != '{') || (bracket == ']' && top != '[') || (bracket == ')' && top != '(')) {
+                    return "false";
+                }
+            }
+        }
+
+        return stack.isEmpty() ? "true" : "false";
+    }
+}
+
+class Solution {
+    public static void main(String[] args) {
+        Parser parser = new Parser();
+        Scanner in = new Scanner(System.in);
+
+        while (in.hasNext()) {
+            System.out.println(parser.isBalanced(in.next()));
+        }
+
+        in.close();
+    }
+}
+
