@@ -1,4 +1,4 @@
-******************************************************************************************************************************************************/
+/******************************************************************************************************************************************************
 Given a list of strings of bracket characters: {}(), the string of brackets is balanced under the following conditions:
 1. it is the empty string. 
 2. if strings a and b are balanced, ab is balanced.
